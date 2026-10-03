@@ -69,7 +69,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:68px}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .icon{width:48px;height:48px;border-radius:14px;background:var(--soft);display:grid;place-items:center;font-size:1.4rem;margin-bottom:18px}
 .card h3{font-size:1.2rem;margin-bottom:8px}
-.card p{color:var(--muted);font-size:.95rem}
+.card p{color:var(--muted);font-size:.95rem}.card.wide{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:8px 24px;align-items:start;border-color:var(--brand)}.card.wide .icon{margin:0}.card.wide .tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:4px}.card.wide p+p{margin-top:10px}@media (max-width:720px){.card.wide{grid-template-columns:1fr}}
 
 /* steps */
 .steps-sec{background:var(--soft)}
@@ -301,7 +301,7 @@ footer{background:var(--ink);color:#9a9184;text-align:center;padding:24px 0 32px
     <span class="eyebrow">Hizmetler</span>
     <h2>Size nasıl yardımcı olabilirim?</h2>
     <p class="lead">İhtiyacınıza uygun programı birlikte belirleyelim.</p>
-    <div class="cards">
+    <div class="cards"><div class="card wide"><div class="icon">🌿</div><div><span class="tag">Bütüncül yaklaşım</span><h3>Fonksiyonel Tıp Diyetisyenliği</h3><p>Otoimmün hastalıklar, kronik inflamasyon, insülin direnci ve metabolik sorunlar, bağırsak ve mikrobiyota sağlığı, gıda intoleransları ve hassasiyetleri ile hormonal dengesizliklerde beslenmeyi bütüncül olarak ele alan bir yaklaşımdır.</p><p>Kişinin semptomları, laboratuvar bulguları, beslenme alışkanlıkları ve yaşam tarzı birlikte değerlendirilerek bağırsak sağlığını ve metabolik dengeyi destekleyen kişiye özel beslenme programları oluşturulur.</p></div></div>
       <div class="card"><div class="icon">⚖️</div><h3>Kilo Yönetimi</h3><p>Sağlıklı kilo verme, alma veya kiloyu koruma için kişiye özel programlar.</p></div>
       <div class="card"><div class="icon">💻</div><h3>Online Diyet</h3><p>Nerede olursanız olun; görüntülü görüşme ve mesajla düzenli takip.</p></div>
       <div class="card"><div class="icon">🏃‍♀️</div><h3>Sporcu Beslenmesi</h3><p>Performansı ve toparlanmayı destekleyen antrenmana uygun beslenme.</p></div>
@@ -402,7 +402,7 @@ footer{background:var(--ink);color:#9a9184;text-align:center;padding:24px 0 32px
       <p style="color:var(--muted);font-size:.9rem;margin-bottom:18px">Formu doldurun, mesajınız WhatsApp'a hazır olarak açılsın.</p>
       <div class="field"><label for="ad">Ad Soyad</label><input id="ad" required></div>
       <div class="field"><label for="hizmet">Hizmet</label>
-        <select id="hizmet"><option>Kilo Yönetimi</option><option>Online Diyet</option><option>Sporcu Beslenmesi</option><option>Gebelik & Emzirme</option><option>Çocuk & Ergen</option><option>Hastalıklarda Beslenme</option><option>Diğer</option></select></div>
+        <select id="hizmet"><option>Kilo Yönetimi</option><option>Fonksiyonel Tıp Diyetisyenliği</option><option>Online Diyet</option><option>Sporcu Beslenmesi</option><option>Gebelik & Emzirme</option><option>Çocuk & Ergen</option><option>Hastalıklarda Beslenme</option><option>Diğer</option></select></div>
       <div class="field"><label for="mesaj">Mesajınız</label><textarea id="mesaj" rows="3"></textarea></div>
       <button class="btn" type="submit" style="width:100%;justify-content:center">WhatsApp ile Gönder</button>
     </form>
