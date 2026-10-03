@@ -1,0 +1,3 @@
+Fotoğraf ve videoları bu klasöre yükleyin.
+Dosya adını tarihle başlatın (örn. 2026-10-05-ofis.jpg) — en yeni en üstte görünür.
+Videolar en fazla 25 MB olmalı (GitHub web yükleme sınırı).

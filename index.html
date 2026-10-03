@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1c1b19">
+<title>Diyetisyen İlayda Çağlan | Diyarbakır</title>
+<meta name="description" content="Diyarbakır diyetisyen İlayda Çağlan — kişiye özel beslenme programları, kilo yönetimi ve online danışmanlık.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%231c1b19%22/%3E%3Ctext x=%2250%22 y=%2266%22 font-size=%2246%22 text-anchor=%22middle%22 fill=%22%23d4ad5a%22 font-family=%22Georgia%22%3E%C4%B0%C3%87%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf7f2; --surface:#ffffff; --soft:#f3ece0; --ink:#262422; --muted:#6b645a;
+  --brand:#a8812f; --brand-dark:#8a6922; --accent:#c9a45c; --line:#e8e0d2;
+  --head:Fraunces,Georgia,serif; --radius:18px; --shadow:0 10px 30px rgba(34,48,31,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:var(--head);font-weight:600;line-height:1.2}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);margin-bottom:12px}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:16px}
+.lead{color:var(--muted);max-width:620px}
+
+/* nav */
+header{position:sticky;top:0;z-index:10;background:rgba(250,247,242,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--head);font-size:1.25rem;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo span{width:34px;height:34px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:.95rem}
+.links{display:flex;gap:28px;list-style:none}
+.links a{text-decoration:none;font-size:.95rem;color:var(--muted);font-weight:500}
+.links a:hover{color:var(--brand)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;text-decoration:none;padding:13px 24px;border-radius:999px;font-weight:600;font-size:.95rem;border:0;cursor:pointer;transition:background .2s,transform .2s}
+.btn:hover{background:var(--brand-dark);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--brand);color:var(--brand);background:transparent}
+.menu-btn{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
+
+/* hero */
+.hero{padding:72px 0 88px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,5.5vw,3.6rem);margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero p{color:var(--muted);font-size:1.1rem;margin-bottom:32px;max-width:520px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.photo{aspect-ratio:4/5;border-radius:200px 200px var(--radius) var(--radius);background:linear-gradient(160deg,#e9dcc4,#3a3632);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:54% 40%}
+.photo .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--brand-dark);font-family:var(--head);font-size:4.5rem}
+.photo .ph small{display:block;font-family:Inter,sans-serif;font-size:.85rem;color:var(--muted);margin-top:6px}
+.badges{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap}
+.badges div{font-size:.9rem;color:var(--muted)}
+.badges b{display:block;font-family:var(--head);font-size:1.4rem;color:var(--ink)}
+
+/* about */
+.about{background:var(--surface)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.about p{color:var(--muted);margin-bottom:16px}
+.list{list-style:none;display:grid;gap:12px;margin-top:8px}
+.list li{display:flex;gap:12px;align-items:flex-start}
+.list li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--soft);color:var(--brand);display:grid;place-items:center;font-size:.8rem;font-weight:700;margin-top:3px}
+
+/* services */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.icon{width:48px;height:48px;border-radius:14px;background:var(--soft);display:grid;place-items:center;font-size:1.4rem;margin-bottom:18px}
+.card h3{font-size:1.2rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+
+/* steps */
+.steps-sec{background:var(--soft)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px;counter-reset:s}
+.step{background:var(--surface);border-radius:var(--radius);padding:24px}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;margin-bottom:14px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--muted)}
+
+/* bmi */
+.bmi{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
+label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+input,textarea,select{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--bg);color:var(--ink)}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--brand)}
+.result{margin-top:20px;padding:18px;border-radius:14px;background:var(--soft);display:none}
+.result b{font-family:var(--head);font-size:2rem;display:block}
+.note{font-size:.8rem;color:var(--muted);margin-top:10px}
+
+/* faq */
+.faq{max-width:760px;margin:40px auto 0}
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--brand);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);margin-top:10px}
+
+/* contact */
+.contact{background:var(--ink);color:#f5f0e8}
+.contact .lead{color:#c9c1b4}.contact .eyebrow{color:var(--accent)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:8px}
+.channels{display:grid;gap:14px;margin-top:28px}
+.channel{display:flex;gap:14px;align-items:center;padding:16px 18px;border-radius:14px;background:rgba(255,255,255,.06);text-decoration:none;transition:background .2s}
+.channel:hover{background:rgba(255,255,255,.12)}
+.channel .icon{background:rgba(255,255,255,.1);margin:0;flex:none}
+.channel small{display:block;color:#c9c1b4;font-size:.8rem}
+.form{background:#fff;color:var(--ink);border-radius:var(--radius);padding:30px}
+.form .field{margin-bottom:14px}
+footer{background:var(--ink);color:#9a9184;text-align:center;padding:24px 0 32px;font-size:.85rem;border-top:1px solid rgba(255,255,255,.08)}
+
+.wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.2);z-index:20}
+.wa svg{width:30px;height:30px;fill:#fff}
+
+.map{width:100%;height:240px;border:0;border-radius:14px;margin-top:14px;display:block}
+
+/* galeri */
+[hidden]{display:none!important}
+.filters{display:flex;gap:8px;margin-top:28px;flex-wrap:wrap}
+.filters button{border:1.5px solid var(--line);background:var(--surface);color:var(--muted);padding:8px 18px;border-radius:999px;font:inherit;font-size:.9rem;font-weight:500;cursor:pointer}
+.filters button.on{background:var(--brand);border-color:var(--brand);color:#fff}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:24px}
+.g-item{position:relative;aspect-ratio:1;border-radius:14px;overflow:hidden;background:var(--soft);cursor:pointer;border:0;padding:0}
+.g-item img,.g-item video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.g-item:hover img,.g-item:hover video{transform:scale(1.04)}
+.g-item .play{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+.g-item .play span{width:54px;height:54px;border-radius:50%;background:rgba(0,0,0,.45);color:#fff;display:grid;place-items:center;font-size:1.3rem;padding-left:4px}
+.g-empty{grid-column:1/-1;text-align:center;padding:56px 20px;border:2px dashed var(--line);border-radius:var(--radius);color:var(--muted)}
+.more{display:block;margin:24px auto 0}
+.lightbox{position:fixed;inset:0;background:rgba(15,20,14,.92);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.lightbox.open{display:flex}
+.lightbox img,.lightbox video{max-width:100%;max-height:88vh;border-radius:10px}
+.lb-btn{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:46px;height:46px;border-radius:50%;font-size:1.4rem;cursor:pointer}
+.lb-close{top:16px;right:16px}.lb-prev{left:16px;top:50%}.lb-next{right:16px;top:50%}
+
+@media (max-width:900px){
+  .hero-grid,.about-grid,.bmi,.contact-grid{grid-template-columns:1fr}
+  .photo{max-width:380px;margin:0 auto;width:100%}
+  .cards{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  section{padding:64px 0}
+  .links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{display:block;padding:14px 20px}
+  .menu-btn{display:block}
+  nav .btn{display:none}
+  .cards,.steps,.row{grid-template-columns:1fr}
+}
+
+/* ================= TEMALAR =================
+   Seçilen tema <html data-tema="..."> ile belirlenir. */
+
+/* 2 — Gece Altını: koyu zemin, altın vurgular, tam ekran fotoğraf */
+[data-tema="gece"]{
+  --bg:#1c1b19; --surface:#242320; --soft:#2b2926; --ink:#f3ede2; --muted:#b5ab9b;
+  --brand:#d4ad5a; --brand-dark:#b8923a; --accent:#d4ad5a; --line:#3a3733;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+[data-tema="gece"] header{background:rgba(28,27,25,.9)}
+[data-tema="gece"] .btn{color:#1c1b19}
+[data-tema="gece"] .contact,[data-tema="gece"] footer{background:#121110}
+[data-tema="gece"] .form{background:var(--surface);color:var(--ink)}
+[data-tema="gece"] .logo span{color:#1c1b19}
+
+/* 3 — Pudra: pembe-pudra, rose gold, zarif yazı, ortalanmış giriş */
+[data-tema="pudra"]{
+  --bg:#fcf6f4; --surface:#ffffff; --soft:#f7e8e3; --ink:#3b2a2a; --muted:#80696a;
+  --brand:#b9786b; --brand-dark:#9c5f53; --accent:#d9a79a; --line:#efdcd6;
+  --head:"Cormorant Garamond",Georgia,serif; --radius:24px;
+}
+[data-tema="pudra"] header{background:rgba(252,246,244,.92)}
+[data-tema="pudra"] h1,[data-tema="pudra"] h2,[data-tema="pudra"] h3{font-weight:600;letter-spacing:.01em}
+[data-tema="pudra"] .hero h1{font-size:clamp(2.6rem,6vw,4.2rem);max-width:780px;margin:0 auto 20px}
+
+/* 4 — Doğal Yeşil: adaçayı yeşili, ferah */
+[data-tema="dogal"]{
+  --bg:#f7f9f4; --surface:#ffffff; --soft:#e8f0e2; --ink:#22301f; --muted:#5d6b58;
+  --brand:#5f8a4e; --brand-dark:#46693a; --accent:#e9a37a; --line:#dde5d6;
+}
+[data-tema="dogal"] header{background:rgba(247,249,244,.92)}
+
+/* 5 — Modern Minimal: siyah-beyaz, keskin köşeler, kalın yazı */
+[data-tema="minimal"]{
+  --bg:#ffffff; --surface:#f6f6f4; --soft:#f0efec; --ink:#111111; --muted:#5c5c5c;
+  --brand:#111111; --brand-dark:#000000; --accent:#b8923a; --line:#e2e2e2;
+  --head:Inter,system-ui,sans-serif; --radius:4px; --shadow:none;
+}
+[data-tema="minimal"] header{background:rgba(255,255,255,.95)}
+[data-tema="minimal"] h1,[data-tema="minimal"] h2,[data-tema="minimal"] h3{font-weight:800;letter-spacing:-.02em}
+[data-tema="minimal"] .btn{border-radius:4px}
+[data-tema="minimal"] .hero h1 em{color:var(--accent)}
+[data-tema="minimal"] .eyebrow{color:var(--accent)}
+[data-tema="minimal"] .photo{border-radius:4px}
+[data-tema="minimal"] .contact .eyebrow{color:var(--accent)}
+
+/* --- Yerleşim: tam ekran fotoğraflı giriş (gece) --- */
+[data-tema="gece"] .hero{position:relative;padding:0;min-height:min(86vh,760px);display:flex;align-items:center;overflow:hidden}
+[data-tema="gece"] .hero-grid{grid-template-columns:1fr;position:static;width:100%;padding-top:80px;padding-bottom:80px}
+[data-tema="gece"] .hero-grid>div:first-child{max-width:560px;position:relative;z-index:1}
+[data-tema="gece"] .photo{position:absolute;top:0;bottom:0;right:0;left:38%;aspect-ratio:auto;border-radius:0;box-shadow:none;z-index:0;max-width:none;margin:0}
+[data-tema="gece"] .photo img{object-position:55% 35%}
+[data-tema="gece"] .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#1c1b19 0%,rgba(28,27,25,.6) 22%,rgba(28,27,25,0) 50%)}
+[data-tema="gece"] .btn.ghost{color:var(--ink);border-color:rgba(255,255,255,.3)}
+
+/* --- Yerleşim: ortalanmış giriş, yuvarlak fotoğraf (pudra) --- */
+[data-tema="pudra"] .hero-grid{grid-template-columns:1fr;text-align:center;gap:32px}
+[data-tema="pudra"] .photo{order:-1;width:220px;aspect-ratio:1;border-radius:50%;margin:0 auto;border:6px solid #fff;box-shadow:0 0 0 1px var(--line),var(--shadow)}
+[data-tema="pudra"] .photo img{object-position:56% 30%;transform:scale(1.6);transform-origin:56% 32%}
+[data-tema="pudra"] .hero p{margin-left:auto;margin-right:auto}
+[data-tema="pudra"] .cta,[data-tema="pudra"] .badges{justify-content:center}
+
+/* --- Yerleşim: geniş dikdörtgen fotoğraf (minimal) --- */
+[data-tema="minimal"] .hero-grid{grid-template-columns:1fr 1fr}
+[data-tema="minimal"] .photo{aspect-ratio:3/4}
+
+@media (max-width:900px){
+  [data-tema="minimal"] .hero-grid{grid-template-columns:1fr}
+  [data-tema="gece"] .hero{display:block;min-height:0}
+  [data-tema="gece"] .hero-grid{padding-top:0;padding-bottom:64px;gap:0}
+  [data-tema="gece"] .photo{position:relative;left:0;height:440px;width:auto;margin:0 -20px}
+  [data-tema="gece"] .photo img{object-position:56% 30%}
+  [data-tema="gece"] .photo::after{background:linear-gradient(180deg,rgba(28,27,25,0) 55%,#1c1b19 100%)}
+  [data-tema="gece"] .hero-grid>div:first-child{margin-top:-40px}
+  [data-tema="gece"] .hero-grid .photo{order:-1}
+}
+</style>
+<script>
+  /* Seçilen tema: Gece Altını */
+  (function(){
+    var t = new URLSearchParams(location.search).get('tema') || 'gece';
+    document.documentElement.setAttribute('data-tema', t);
+  })();
+</script>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#" class="logo"><span>İÇ</span>İlayda Çağlan</a>
+    <ul class="links" id="links">
+      <li><a href="#hakkimda">Hakkımda</a></li>
+      <li><a href="#hizmetler">Hizmetler</a></li>
+      <li><a href="#galeri">Galeri</a></li>
+      <li><a href="#surec">Süreç</a></li>
+      <li><a href="#vki">VKİ Hesapla</a></li>
+      <li><a href="#sss">SSS</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+    <a href="#iletisim" class="btn">Randevu Al</a>
+    <button class="menu-btn" aria-label="Menü" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Diyetisyen · Diyarbakır</span>
+      <h1>Yasaklarla değil, <em>alışkanlıklarla</em> sağlıklı yaşam.</h1>
+      <p>Merhaba, ben İlayda. Size özel, sürdürülebilir ve keyifli beslenme programlarıyla hedeflerinize birlikte ulaşalım.</p>
+      <div class="cta">
+        <a href="#iletisim" class="btn">Ücretsiz Ön Görüşme</a>
+        <a href="#hizmetler" class="btn ghost">Hizmetleri İncele</a>
+      </div>
+      <div class="badges">
+        <div><b>Yüz yüze</b>& online görüşme</div>
+        <div><b>Kişiye özel</b>beslenme planı</div>
+        <div><b>Düzenli</b>takip & destek</div>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="ilayda.jpg" alt="Diyetisyen İlayda Çağlan ofisinde">
+    </div>
+  </div>
+</section>
+
+<section class="about" id="hakkimda">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow">Hakkımda</span>
+      <h2>Beslenme bir diyet değil, bir yaşam tarzı.</h2>
+    </div>
+    <div>
+      <p>Danışanlarımla çalışırken amacım kısa süreli kilo kaybı değil; günlük hayata uyum sağlayan, kalıcı ve sağlıklı alışkanlıklar kazandırmak.</p>
+      <p>Her bireyin yaşam tarzı, damak zevki ve ihtiyaçları farklıdır. Bu yüzden hazır listeler yerine size özel planlar hazırlıyorum.</p>
+      <ul class="list">
+        <li>Bilimsel temelli, güncel yaklaşımlar</li>
+        <li>Yasaksız, sürdürülebilir beslenme</li>
+        <li>Süreç boyunca birebir iletişim ve motivasyon</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="hizmetler">
+  <div class="wrap">
+    <span class="eyebrow">Hizmetler</span>
+    <h2>Size nasıl yardımcı olabilirim?</h2>
+    <p class="lead">İhtiyacınıza uygun programı birlikte belirleyelim.</p>
+    <div class="cards">
+      <div class="card"><div class="icon">⚖️</div><h3>Kilo Yönetimi</h3><p>Sağlıklı kilo verme, alma veya kiloyu koruma için kişiye özel programlar.</p></div>
+      <div class="card"><div class="icon">💻</div><h3>Online Diyet</h3><p>Nerede olursanız olun; görüntülü görüşme ve mesajla düzenli takip.</p></div>
+      <div class="card"><div class="icon">🏃‍♀️</div><h3>Sporcu Beslenmesi</h3><p>Performansı ve toparlanmayı destekleyen antrenmana uygun beslenme.</p></div>
+      <div class="card"><div class="icon">🤰</div><h3>Gebelik & Emzirme</h3><p>Anne ve bebek sağlığı için dönemlere özel beslenme desteği.</p></div>
+      <div class="card"><div class="icon">🧒</div><h3>Çocuk & Ergen</h3><p>Büyüme dönemine uygun, sağlıklı yeme alışkanlıkları kazandırma.</p></div>
+      <div class="card"><div class="icon">🩺</div><h3>Hastalıklarda Beslenme</h3><p>Diyabet, insülin direnci, tansiyon gibi durumlarda tıbbi beslenme tedavisi.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="galeri">
+  <div class="wrap">
+    <span class="eyebrow">Galeri</span>
+    <h2>Ofisimden kareler</h2>
+    <p class="lead">Çalışma ortamım, etkinlikler ve paylaşımlarımdan fotoğraf ve videolar.</p>
+    <div class="filters">
+      <button class="on" data-f="hepsi">Tümü</button>
+      <button data-f="foto">Fotoğraflar</button>
+      <button data-f="video">Videolar</button>
+    </div>
+    <div class="gallery" id="gallery"><div class="g-empty">Galeri yükleniyor…</div></div>
+    <button class="btn ghost more" id="more" hidden>Daha fazla göster</button>
+  </div>
+</section>
+
+<div class="lightbox" id="lb" role="dialog" aria-modal="true">
+  <button class="lb-btn lb-close" aria-label="Kapat">✕</button>
+  <button class="lb-btn lb-prev" aria-label="Önceki">‹</button>
+  <div id="lb-body"></div>
+  <button class="lb-btn lb-next" aria-label="Sonraki">›</button>
+</div>
+
+<section class="steps-sec" id="surec">
+  <div class="wrap">
+    <span class="eyebrow">Süreç</span>
+    <h2>Nasıl çalışıyoruz?</h2>
+    <div class="steps">
+      <div class="step"><h3>Ön Görüşme</h3><p>Hedeflerinizi ve beklentilerinizi konuşuyoruz.</p></div>
+      <div class="step"><h3>Detaylı Analiz</h3><p>Ölçümler, beslenme alışkanlıkları ve yaşam tarzı değerlendirmesi.</p></div>
+      <div class="step"><h3>Kişisel Plan</h3><p>Size özel, uygulanabilir beslenme programı hazırlanır.</p></div>
+      <div class="step"><h3>Takip</h3><p>Düzenli kontroller ve ihtiyaca göre güncellemeler.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="vki">
+  <div class="wrap bmi">
+    <div>
+      <span class="eyebrow">Mini Araç</span>
+      <h2>Vücut Kitle İndeksinizi hesaplayın</h2>
+      <p class="lead">VKİ hızlı bir ön fikir verir; ancak kas oranı, yaş ve vücut yapısını hesaba katmaz. Doğru değerlendirme için birebir analiz önerilir.</p>
+    </div>
+    <div class="calc">
+      <div class="row">
+        <div><label for="boy">Boy (cm)</label><input id="boy" type="number" inputmode="decimal" placeholder="165"></div>
+        <div><label for="kilo">Kilo (kg)</label><input id="kilo" type="number" inputmode="decimal" placeholder="60"></div>
+      </div>
+      <button class="btn" onclick="hesapla()" style="width:100%;justify-content:center">Hesapla</button>
+      <div class="result" id="sonuc"><b id="deger"></b><span id="durum"></span></div>
+      <p class="note">Bu hesaplama tıbbi tavsiye yerine geçmez.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sss">
+  <div class="wrap">
+    <div style="text-align:center">
+      <span class="eyebrow">SSS</span>
+      <h2>Sık sorulan sorular</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Online diyet nasıl işliyor?</summary><p>İlk görüşmeyi görüntülü yapıyoruz. Programınız size iletiliyor, ardından haftalık/iki haftalık kontrollerle ve mesaj desteğiyle süreci birlikte takip ediyoruz.</p></details>
+      <details><summary>Diyet listesinde sevdiğim yiyecekler olacak mı?</summary><p>Elbette. Programlar damak zevkinize ve günlük rutininize göre hazırlanır; amaç yasaklamak değil, dengelemek.</p></details>
+      <details><summary>Kontroller ne sıklıkla yapılıyor?</summary><p>Genellikle 1–2 haftada bir; hedefinize ve ihtiyacınıza göre birlikte belirliyoruz.</p></details>
+      <details><summary>İlk görüşmeye gelirken ne hazırlamalıyım?</summary><p>Varsa son kan tahlili sonuçlarınızı ve kullandığınız ilaçların listesini getirmeniz yeterli.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="iletisim">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">İletişim</span>
+      <h2>Hadi başlayalım!</h2>
+      <p class="lead">Randevu ve sorularınız için bana dilediğiniz kanaldan ulaşabilirsiniz.</p>
+      <div class="channels">
+        <a class="channel" href="https://wa.me/905331842094" target="_blank" rel="noopener"><div class="icon">💬</div><div>WhatsApp<small>+90 533 184 20 94</small></div></a>
+        <a class="channel" href="https://instagram.com/dytilaydacaglan" target="_blank" rel="noopener"><div class="icon">📸</div><div>Instagram<small>@dytilaydacaglan</small></div></a>
+        <a class="channel" href="mailto:caglanilayda@gmail.com"><div class="icon">✉️</div><div>E-posta<small>caglanilayda@gmail.com</small></div></a>
+        <a class="channel" href="https://www.google.com/maps/search/?api=1&query=Centropol+Merkez+Ofis+Ba%C4%9Fc%C4%B1lar+Ba%C4%9Flar+Diyarbak%C4%B1r" target="_blank" rel="noopener"><div class="icon">📍</div><div>Adres · Yol tarifi al<small>Bağcılar Mah. 1205 Sk. Centropol Merkez Ofis, C Blok Kat: 2 Daire: 10 (Bağlar Kadın Doğum Hastanesi yanı) Bağlar / Diyarbakır</small></div></a>
+      </div>
+      <iframe class="map" title="Ofis konumu" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Centropol+Merkez+Ofis+Ba%C4%9Fc%C4%B1lar+Ba%C4%9Flar+Diyarbak%C4%B1r&z=16&output=embed"></iframe>
+      <p style="color:#c9c1b4;font-size:.85rem;margin-top:10px">Online görüşme de mevcuttur.</p>
+    </div>
+    <form class="form" onsubmit="return gonder(event)">
+      <h3 style="margin-bottom:6px">Randevu talebi</h3>
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:18px">Formu doldurun, mesajınız WhatsApp'a hazır olarak açılsın.</p>
+      <div class="field"><label for="ad">Ad Soyad</label><input id="ad" required></div>
+      <div class="field"><label for="hizmet">Hizmet</label>
+        <select id="hizmet"><option>Kilo Yönetimi</option><option>Online Diyet</option><option>Sporcu Beslenmesi</option><option>Gebelik & Emzirme</option><option>Çocuk & Ergen</option><option>Hastalıklarda Beslenme</option><option>Diğer</option></select></div>
+      <div class="field"><label for="mesaj">Mesajınız</label><textarea id="mesaj" rows="3"></textarea></div>
+      <button class="btn" type="submit" style="width:100%;justify-content:center">WhatsApp ile Gönder</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yil"></span> Diyetisyen İlayda Çağlan · Tüm hakları saklıdır.</footer>
+
+<a class="wa" href="https://wa.me/905331842094" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2l-.4-.3z"/></svg>
+</a>
+
+<script>
+const WHATSAPP = "905331842094"; 
+document.getElementById('yil').textContent = new Date().getFullYear();
+document.querySelectorAll('.links a').forEach(a => a.addEventListener('click', () => document.getElementById('links').classList.remove('open')));
+
+/* ---------- GALERİ ----------
+   Fotoğraf/video eklemek için GitHub'daki "galeri" klasörüne dosya yüklemek yeterli.
+   Aşağıya GitHub kullanıcı adını ve depo adını yazın. */
+const GITHUB_KULLANICI = "dytilaydacaglan";
+const GITHUB_DEPO = "dytilaydacaglan.com";
+const FOTO = /\.(jpe?g|png|webp|gif|avif)$/i, VIDEO = /\.(mp4|webm|mov|m4v)$/i;
+let medya = [], gorunen = [], filtre = "hepsi", sayfa = 24, lbIndex = 0;
+
+async function galeriYukle(){
+  const el = document.getElementById('gallery');
+  try {
+    let dosyalar;
+    if (GITHUB_KULLANICI && GITHUB_DEPO) {
+      const r = await fetch(`https://api.github.com/repos/${GITHUB_KULLANICI}/${GITHUB_DEPO}/contents/galeri`);
+      if (!r.ok) throw 0;
+      dosyalar = (await r.json()).map(d => d.name);
+    } else {
+      const r = await fetch('galeri/liste.json');   // GitHub ayarlanmadıysa yedek liste
+      if (!r.ok) throw 0;
+      dosyalar = await r.json();
+    }
+    medya = dosyalar.filter(n => FOTO.test(n) || VIDEO.test(n))
+      .sort((a, b) => b.localeCompare(a, 'tr', {numeric: true}))   // yeni tarihli isimler önce
+      .map(n => ({src: 'galeri/' + encodeURIComponent(n), tip: VIDEO.test(n) ? 'video' : 'foto'}));
+  } catch { medya = []; }
+  galeriCiz();
+}
+
+function galeriCiz(){
+  const el = document.getElementById('gallery');
+  gorunen = medya.filter(m => filtre === 'hepsi' || m.tip === filtre);
+  if (!gorunen.length) { el.innerHTML = '<div class="g-empty">Çok yakında burada fotoğraf ve videolar olacak.</div>'; document.getElementById('more').hidden = true; return; }
+  el.innerHTML = gorunen.slice(0, sayfa).map((m, i) => m.tip === 'video'
+    ? `<button class="g-item" data-i="${i}" aria-label="Videoyu aç"><video src="${m.src}#t=0.5" muted playsinline preload="metadata"></video><div class="play"><span>▶</span></div></button>`
+    : `<button class="g-item" data-i="${i}" aria-label="Fotoğrafı büyüt"><img src="${m.src}" alt="Galeri fotoğrafı" loading="lazy"></button>`).join('');
+  document.getElementById('more').hidden = gorunen.length <= sayfa;
+}
+
+function lbAc(i){
+  lbIndex = (i + gorunen.length) % gorunen.length;
+  const m = gorunen[lbIndex];
+  document.getElementById('lb-body').innerHTML = m.tip === 'video'
+    ? `<video src="${m.src}" controls autoplay playsinline></video>` : `<img src="${m.src}" alt="Galeri fotoğrafı">`;
+  document.getElementById('lb').classList.add('open');
+}
+function lbKapat(){ document.getElementById('lb').classList.remove('open'); document.getElementById('lb-body').innerHTML = ''; }
+
+document.getElementById('gallery').addEventListener('click', e => { const b = e.target.closest('.g-item'); if (b) lbAc(+b.dataset.i); });
+document.getElementById('more').addEventListener('click', () => { sayfa += 24; galeriCiz(); });
+document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.filters button').forEach(x => x.classList.remove('on'));
+  b.classList.add('on'); filtre = b.dataset.f; sayfa = 24; galeriCiz();
+}));
+document.querySelector('.lb-close').onclick = lbKapat;
+document.querySelector('.lb-prev').onclick = () => lbAc(lbIndex - 1);
+document.querySelector('.lb-next').onclick = () => lbAc(lbIndex + 1);
+document.getElementById('lb').addEventListener('click', e => { if (e.target.id === 'lb') lbKapat(); });
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lb').classList.contains('open')) return;
+  if (e.key === 'Escape') lbKapat(); if (e.key === 'ArrowLeft') lbAc(lbIndex - 1); if (e.key === 'ArrowRight') lbAc(lbIndex + 1);
+});
+galeriYukle();
+
+function hesapla(){
+  const boy = parseFloat(document.getElementById('boy').value) / 100;
+  const kilo = parseFloat(document.getElementById('kilo').value);
+  if(!boy || !kilo) return;
+  const v = kilo / (boy * boy);
+  let d = v < 18.5 ? "Zayıf" : v < 25 ? "Normal kilolu" : v < 30 ? "Fazla kilolu" : "Obez";
+  document.getElementById('deger').textContent = v.toFixed(1).replace('.', ',');
+  document.getElementById('durum').textContent = d + " aralığında";
+  document.getElementById('sonuc').style.display = 'block';
+}
+function gonder(e){
+  e.preventDefault();
+  const txt = `Merhaba İlayda Hanım, ben ${document.getElementById('ad').value}. ${document.getElementById('hizmet').value} hakkında randevu almak istiyorum.\n${document.getElementById('mesaj').value}`;
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(txt)}`, '_blank');
+  return false;
+}
+</script>
+</body>
+</html>
