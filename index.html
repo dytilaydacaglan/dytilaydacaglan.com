@@ -116,6 +116,16 @@ footer{background:var(--ink);color:#9a9184;text-align:center;padding:24px 0 32px
 
 .map{width:100%;height:240px;border:0;border-radius:14px;margin-top:14px;display:block}
 
+/* tanıtım videosu */
+.intro{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:48px;align-items:center;margin:36px 0 56px}
+.intro-video{position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#000;box-shadow:var(--shadow);border:1px solid var(--line)}
+.intro-video video{width:100%;height:100%;object-fit:cover;display:block}
+.ses-btn{position:absolute;left:12px;bottom:12px;border:0;border-radius:999px;padding:9px 14px;background:rgba(0,0,0,.6);color:#fff;font:600 .85rem Inter,sans-serif;cursor:pointer;backdrop-filter:blur(6px)}
+.intro-text h3{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:14px}
+.intro-text h3 em{font-style:normal;color:var(--brand)}
+.intro-text p{color:var(--muted);margin-bottom:24px;max-width:460px}
+@media (max-width:760px){.intro{grid-template-columns:1fr;gap:24px}.intro-video{max-width:360px;width:100%;margin:0 auto}.intro-text{text-align:center}.intro-text p{margin-left:auto;margin-right:auto}}
+
 /* galeri */
 [hidden]{display:none!important}
 .filters{display:flex;gap:8px;margin-top:28px;flex-wrap:wrap}
@@ -317,6 +327,18 @@ footer{background:var(--ink);color:#9a9184;text-align:center;padding:24px 0 32px
     <span class="eyebrow">Galeri</span>
     <h2>Ofisimden kareler</h2>
     <p class="lead">Çalışma ortamım, etkinlikler ve paylaşımlarımdan fotoğraf ve videolar.</p>
+    <div class="intro">
+      <div class="intro-video">
+        <video id="tanitim" src="tanitim.mp4" poster="tanitim.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <button class="ses-btn" id="ses-btn" type="button" aria-label="Sesi aç">🔇 Sesi aç</button>
+      </div>
+      <div class="intro-text">
+        <span class="eyebrow">Tanıtım</span>
+        <h3>Diyet değil, <em>yaşam tarzı.</em></h3>
+        <p>Ofisimizi ve çalışma yaklaşımımızı kısa tanıtım videomuzda izleyin. Size özel, sürdürülebilir bir beslenme planı için tanışalım.</p>
+        <a href="#iletisim" class="btn">Randevu Al</a>
+      </div>
+    </div>
     <div class="filters">
       <button class="on" data-f="hepsi">Tümü</button>
       <button data-f="foto">Fotoğraflar</button>
@@ -483,6 +505,18 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') lbKapat(); if (e.key === 'ArrowLeft') lbAc(lbIndex - 1); if (e.key === 'ArrowRight') lbAc(lbIndex + 1);
 });
 galeriYukle();
+
+/* Tanıtım videosu: sessiz başlar, butonla ses açılır */
+(function(){
+  const v = document.getElementById('tanitim'), b = document.getElementById('ses-btn');
+  if (!v || !b) return;
+  b.addEventListener('click', () => {
+    v.muted = !v.muted;
+    if (!v.muted) { v.currentTime = 0; v.play(); }
+    b.textContent = v.muted ? '🔇 Sesi aç' : '🔊 Sesi kapat';
+    b.setAttribute('aria-label', v.muted ? 'Sesi aç' : 'Sesi kapat');
+  });
+})();
 
 function hesapla(){
   const boy = parseFloat(document.getElementById('boy').value) / 100;
